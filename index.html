@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#2b1710">
+<meta name="description" content="HORAS JALA GABE PUNGUAN SITUMORANG SIPITU AMA SEKTOR TANJUNG UNCANG - Dos Niroha Do Sibaen Nasaut - Jadwal, presensi, anggota, chat dan dokumentasi">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<title>HORAS JALA GABE — PUNGUAN SITUMORANG SIPITU AMA SEKTOR TANJUNG UNCANG</title>
+<!-- PSSAB v28: ID Card modern + perbaikan lokasi Maps + motto resmi -->
+<style>
+:root{--red:#8e1017;--gold:#d7a62a;--dark:#2b1710;--cream:#fff7e6;--muted:#756b64}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#251c18}
+header{background:linear-gradient(135deg,#2b1710,#641016);color:#fff;padding:18px 16px 20px;position:sticky;top:0;z-index:5;box-shadow:0 3px 12px #0003}
+.brand{display:flex;align-items:center;gap:12px}.brand img{width:58px;height:58px;border-radius:14px;object-fit:cover}.brand h1{font-size:19px;margin:0}.brand small{color:#f2d47b}
+main{padding:14px 14px 90px;max-width:700px;margin:auto}.card{background:#fff;border-radius:18px;padding:16px;margin:10px 0;box-shadow:0 2px 12px #2b17100f;border:1px solid #eadfce}
+h2{font-size:21px;margin:6px 0}.muted{color:var(--muted);font-size:13px}.motto{color:var(--red);font-weight:800;letter-spacing:.2px;margin:8px 0 12px}.gold{color:var(--gold)}button,.btn{border:0;border-radius:12px;padding:12px 15px;background:var(--red);color:#fff;font-weight:700;font-size:14px}.btn2{background:#f3e6d4;color:var(--dark)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.quick{text-align:left;min-height:76px;background:#fff;color:var(--dark);border:1px solid #eadfce}.quick b{display:block;color:var(--red);font-size:15px}.list{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid #eee}.list:last-child{border-bottom:0}.avatar{width:42px;height:42px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:800}.person{display:flex;align-items:center;gap:10px}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}input,select,textarea{width:100%;padding:12px;border:1px solid #d8cbbb;border-radius:11px;font:inherit;background:#fff}textarea{min-height:80px}.field{margin:8px 0}.bottom{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #ddd;display:flex;justify-content:space-around;padding:7px 4px;z-index:8}.bottom button{background:transparent;color:#555;padding:7px 8px;font-size:11px}.bottom button.active{color:var(--red);font-weight:800}.photo{width:100%;border-radius:12px;margin-top:8px;max-height:250px;object-fit:cover}.chat{padding:10px;border-radius:14px;margin:7px 0;max-width:88%;background:#f3e9dd}.chat.me{margin-left:auto;background:#ffe1e1}.toast{position:fixed;bottom:75px;left:50%;transform:translateX(-50%);background:#2b1710;color:#fff;padding:11px 16px;border-radius:99px;display:none;z-index:20}.hide{display:none}.notice{background:#fff7e6;border:1px solid #eadfce;border-radius:12px;padding:12px;margin-top:10px}.qr-card{text-align:center}.qr-card #qrcode{display:flex;justify-content:center;margin:14px auto}.qr-timer{font-weight:800;color:var(--red);margin:8px 0}.scanner video{width:100%!important;border-radius:14px}.scanner{overflow:hidden}.scan-help{background:#fff7e6;border:1px solid #eadfce;border-radius:12px;padding:12px;margin-top:10px}.idcard{max-width:430px;margin:10px auto;background:linear-gradient(135deg,#2b1710,#641016);color:#fff;border-radius:22px;padding:18px;box-shadow:0 8px 28px #2b171033}.idhead{display:flex;align-items:center;gap:10px}.idhead img{width:48px;height:48px;border-radius:12px;object-fit:cover}.idphoto{width:105px;height:105px;border-radius:18px;object-fit:cover;border:3px solid #f2d47b}.idbody{display:flex;gap:14px;align-items:center;margin-top:16px}.idinfo b{font-size:18px}.idqr{background:#fff;padding:10px;border-radius:14px;display:flex;justify-content:center;margin-top:15px}.idqr canvas,.idqr img{max-width:210px}.id-no{font-size:28px;font-weight:900;letter-spacing:2px;color:#f2d47b}.profile-actions{display:flex;gap:8px;flex-wrap:wrap}@media print{body>*:not(#printArea){display:none!important}#printArea{display:block!important}.idcard{box-shadow:none;margin:0 auto;print-color-adjust:exact;-webkit-print-color-adjust:exact}}#printArea{display:none}
+
+
+/* ===== PSSAB MODERN ID CARD — REF IMAGE ===== */
+.idcard{max-width:430px;margin:14px auto;background:radial-gradient(circle at 85% 8%,rgba(126,17,24,.95),transparent 34%),linear-gradient(145deg,#170707 0%,#3b090d 45%,#650b12 100%);color:#fff;border-radius:25px;padding:15px;box-shadow:0 18px 45px rgba(43,23,16,.3);border:2px solid #f2d47b;position:relative;overflow:hidden}
+.idcard:before{content:"";position:absolute;inset:7px;border:1px solid rgba(242,212,123,.65);border-radius:19px;pointer-events:none;background:repeating-linear-gradient(135deg,transparent 0 17px,rgba(242,212,123,.025) 18px 20px)}
+.idcard:after{content:"✦  ❖  ✦";position:absolute;right:12px;top:10px;color:#f2d47b;opacity:.75;font-size:18px;letter-spacing:4px;pointer-events:none}
+.idtop{display:flex;align-items:center;gap:11px;position:relative;z-index:1;padding:5px 5px 12px;border-bottom:1px solid rgba(242,212,123,.55)}
+.idlogo{width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid #f2d47b;box-shadow:0 4px 14px #0008}
+.idbrand{min-width:0}.idbrand strong{display:block;color:#f7d875;font-size:34px;letter-spacing:3px;line-height:.95;font-family:Georgia,serif}.idbrand span{display:block;font-size:9.5px;line-height:1.35;margin-top:6px;font-weight:800;letter-spacing:.15px}
+.idmember{position:relative;z-index:1;display:grid;grid-template-columns:125px 1fr;gap:15px;align-items:center;margin-top:16px;padding:5px 6px 8px;background:linear-gradient(145deg,rgba(0,0,0,.58),rgba(24,8,8,.78));border:1px solid rgba(242,212,123,.75);border-radius:23px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.035)}
+.idphoto{width:116px;height:132px;border-radius:20px;object-fit:cover;border:4px solid #f2d47b;background:#fff;box-shadow:0 7px 18px #0007}
+.idinfo{min-width:0}.idname{font-size:24px;line-height:1.05;font-weight:950;margin-bottom:13px;font-family:Georgia,serif}.idfield{display:grid;grid-template-columns:28px 1fr;column-gap:6px;align-items:center;margin:8px 0}.idfield:before{font-size:18px;color:#f7d875;text-align:center}.idfield:nth-child(2):before{content:"♙"}.idfield:nth-child(3):before{content:"♟"}.idfield:nth-child(4):before{content:"★"}.idfield .label{font-size:11px;color:#f2d47b;font-weight:900;grid-column:2}.idfield .value{font-size:18px;font-weight:900;grid-column:2;color:#fff}
+.idqrbox{position:relative;z-index:1;background:#fff;border-radius:20px;padding:13px;margin:15px 5px 0;box-shadow:0 7px 18px #0005;border:2px solid #f2d47b}.idqr{margin:0;background:transparent;padding:0;display:flex;justify-content:center}.idqr canvas,.idqr img{max-width:100%;width:220px!important;height:220px!important}.idqrhelp{text-align:center;color:#2b1710;font-size:11px;font-weight:900;margin-top:7px}
+.idfooter{position:relative;z-index:1;text-align:center;margin:15px 5px 2px;padding:13px 5px 3px;border-top:1px solid rgba(242,212,123,.55)}.idfooter strong{display:block;color:#f7d875;font-size:18px;letter-spacing:.8px;font-family:Georgia,serif}.idfooter em{display:block;color:#fff;font-size:15px;margin-top:4px;font-weight:800;font-family:Georgia,serif}.id-valid{font-size:9px;opacity:.75;margin-top:6px}
+.id-actions{max-width:430px;margin:12px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:9px}.id-actions button{width:100%;padding:13px 10px;border-radius:14px}.id-actions .outline{background:#fff;color:var(--red);border:1px solid var(--red)}
+@media(max-width:380px){.idtop{gap:8px}.idlogo{width:60px;height:60px}.idbrand strong{font-size:28px}.idbrand span{font-size:8.5px}.idmember{grid-template-columns:101px 1fr;gap:10px}.idphoto{width:96px;height:112px}.idname{font-size:20px}.idfield .value{font-size:16px}.idqr canvas,.idqr img{width:190px!important;height:190px!important}}
+@media print{body.print-idcard{background:#fff!important}body.print-idcard>*{display:none!important}body.print-idcard #appShell{display:block!important}body.print-idcard #appShell header,body.print-idcard #appShell main>h2,body.print-idcard #appShell .id-actions,body.print-idcard #appShell .bottom{display:none!important}body.print-idcard #appShell main{padding:0!important;max-width:none!important}body.print-idcard #appShell main .idcard{display:block!important;max-width:430px!important;margin:0 auto!important;box-shadow:none!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+
+.delete-modal{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.62);display:flex;align-items:center;justify-content:center;padding:20px}
+.delete-modal-card{width:min(520px,100%);background:var(--card,#fff);color:var(--text,#2b1710);border-radius:20px;padding:24px;box-shadow:0 20px 60px rgba(0,0,0,.35);border:1px solid rgba(0,0,0,.12)}
+.delete-modal-card h3{margin:0 0 12px;font-size:24px}.delete-modal-card p{line-height:1.5;margin:0 0 20px}.delete-modal-card button:disabled{opacity:.55}
+</style>
+</head>
+<body>
+<div id="loginScreen" style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:18px;background:var(--cream)">
+  <div class="card" style="width:100%;max-width:430px;text-align:center">
+    <img src="icons/logo.jpg" style="width:130px;height:130px;border-radius:24px;object-fit:cover">
+    <h2>HORAS JALA GABE PUNGUAN SITUMORANG SIPITU AMA SEKTOR TANJUNG UNCANG</h2>
+    <p class="motto">Dos Niroha Do Sibaen Nasaut</p>
+    <p class="muted">Login anggota untuk menggunakan aplikasi online.</p>
+    <div class="field"><input id="loginEmail" type="email" placeholder="Email" autocomplete="username"></div>
+    <div class="field"><input id="loginPassword" type="password" placeholder="Password" autocomplete="current-password"></div>
+    <button id="loginBtn" onclick="login()" style="width:100%">Masuk</button>
+    <button class="btn2" onclick="showSignup()" style="width:100%;margin-top:8px">Daftar anggota baru</button>
+    <button class="btn2" onclick="resetPassword()" style="width:100%;margin-top:8px">Lupa password</button>
+    <p id="loginStatus" class="muted" style="margin-top:14px">Memeriksa sesi login...</p>
+  </div>
+</div>
+<div id="signupScreen" style="display:none;min-height:100vh;align-items:center;justify-content:center;padding:18px;background:var(--cream)">
+  <div class="card" style="width:100%;max-width:430px">
+    <div class="row" style="justify-content:space-between"><h2 style="margin:0">Daftar Anggota Baru</h2><button class="btn2" onclick="showLogin()">Kembali</button></div>
+    <p class="muted">Buat akun sendiri. Setelah daftar, pilih jenis anggota.</p>
+    <div class="field"><input id="suName" placeholder="Nama lengkap"></div>
+    <div class="field"><input id="suPhone" placeholder="No. HP (opsional)" inputmode="tel"></div>
+    <div class="field"><input id="suEmail" type="email" placeholder="Email" autocomplete="email"></div>
+    <div class="field"><input id="suPassword" type="password" placeholder="Password (min. 8 karakter)" autocomplete="new-password"></div>
+    <div class="field"><label>Jenis anggota</label><select id="suBona" onchange="syncTypeRelation(this.value,'suRel')"><option value="01">01 — Bona</option><option value="02">02 — Boru</option><option value="03">03 — Bere</option><option value="04">04 — Iba Bere</option></select></div>
+    <input type="hidden" id="suRel" value="Bona">
+    <button id="signupBtn" onclick="signup()" style="width:100%">Daftar</button>
+    <p id="signupStatus" class="muted" style="margin-top:14px"></p>
+  </div>
+</div>
+<div id="setupScreen" style="display:none;min-height:100vh;align-items:center;justify-content:center;padding:18px;background:var(--cream)">
+  <div class="card" style="width:100%;max-width:430px">
+    <h2>Lengkapi Profil Anggota</h2>
+    <p class="muted">Akun sudah berhasil dibuat. Lengkapi data berikut untuk mendapatkan ID anggota.</p>
+    <div class="field"><input id="spName" placeholder="Nama lengkap"></div>
+    <div class="field"><input id="spPhone" placeholder="No. HP (opsional)" inputmode="tel"></div>
+    <div class="field"><label>Jenis anggota</label><select id="spBona" onchange="syncTypeRelation(this.value,'spRel')"><option value="01">01 — Bona</option><option value="02">02 — Boru</option><option value="03">03 — Bere</option><option value="04">04 — Iba Bere</option></select></div>
+    <input type="hidden" id="spRel" value="Bona">
+    <button id="setupBtn" onclick="createProfile()" style="width:100%">Simpan Profil & Masuk</button>
+    <button class="btn2" onclick="logout()" style="width:100%;margin-top:8px">Keluar</button>
+    <p id="setupStatus" class="muted" style="margin-top:14px"></p>
+  </div>
+</div>
+  </div>
+</div>
+<div id="appShell" style="display:none">
+<header><div class="brand"><img src="icons/logo.jpg"><div><h1>HORAS JALA GABE PUNGUAN SITUMORANG SIPITU AMA SEKTOR TANJUNG UNCANG</h1><small>PSSAB</small></div></div></header>
+<main id="app"></main>
+<nav class="bottom">
+<button onclick="go('home')" id="n-home">⌂<br>Beranda</button>
+<button onclick="go('members')" id="n-members">👥<br>Anggota</button>
+<button onclick="go('schedule')" id="n-schedule">📅<br>Ibadah</button>
+<button onclick="go('chat')" id="n-chat">💬<br>Chat</button>
+<button onclick="go('profile')" id="n-profile">●<br>Profil</button>
+</nav>
+</div>
+<div class="toast" id="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+<script src="config.js"></script>
+<script>
+window.PSSAB_BUILD="v28-IDCARD-MODERN-REF";
+const SB = window.supabase.createClient(window.PSSAB_CONFIG.SUPABASE_URL, window.PSSAB_CONFIG.SUPABASE_ANON_KEY);
+let state = { user:null, profile:null, members:[], schedules:[], messages:[], attendance:[], docs:[], loading:false, page:'home' };
+const app=()=>document.getElementById('app');
+function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+function toast(s){const e=document.getElementById('toast');e.textContent=s;e.style.display='block';setTimeout(()=>e.style.display='none',1800)}
+function go(p){
+  const target=String(p||'home');
+  state.page=target;
+  if(location.hash.slice(1)!==target) location.hash=target;
+  render(target);
+}
+function isManager(){return ['Admin','Ketua','Sekretaris'].includes(state.profile?.role)}
+function mapTo(s){const text=String(s||'').trim();if(!text)return toast('Lokasi belum tersedia');const q=encodeURIComponent(text);const url='https://www.google.com/maps/search/?api=1&query='+q;location.assign(url)}
+function setNav(p){document.querySelectorAll('.bottom button').forEach(x=>x.classList.remove('active'));document.getElementById('n-'+(p==='admin'?'profile':p))?.classList.add('active')}
+async function loadAll(){
+  if(!state.user)return;
+  const results=await Promise.allSettled([
+    SB.from('profiles').select('*').eq('active',true).order('member_seq',{ascending:true}).order('name'),
+    SB.from('schedules').select('*').order('event_date',{ascending:true}),
+    SB.from('messages').select('id,text,created_at,sender_id,profiles(name,role)').order('created_at'),
+    SB.from('attendance').select('*'),
+    SB.from('documentation').select('id,image_url,caption,created_at,uploader_id,profiles(name)').order('created_at',{ascending:false})
+  ]);
+  const names=['anggota','jadwal','chat','presensi','dokumentasi'];
+  let failed=[];
+  results.forEach((r,i)=>{
+    if(r.status==='rejected'){ failed.push(names[i]); return; }
+    const q=r.value;
+    if(q.error){ failed.push(names[i]); return; }
+    if(i===0) state.members=q.data||[];
+    if(i===1) state.schedules=q.data||[];
+    if(i===2) state.messages=q.data||[];
+    if(i===3) state.attendance=q.data||[];
+    if(i===4) state.docs=q.data||[];
+  });
+  if(failed.length) console.warn('PSSAB data gagal dimuat:',failed.join(', '));
+}
+async function boot(){
+  const status=document.getElementById('loginStatus');
+  try{
+    if(!window.supabase){showLogin('Koneksi login belum termuat. Periksa internet lalu refresh.');return}
+    if(status)status.textContent='Memeriksa sesi login...';
+    const {data:{session},error:se}=await SB.auth.getSession();
+    if(se) throw se;
+    state.user=session?.user||null;
+    if(!state.user){showLogin('Silakan masukkan email dan password.');return}
+    showApp();
+    const {data:p,error}=await SB.from('profiles').select('*').eq('id',state.user.id).maybeSingle();
+    if(error) throw error;
+    state.profile=p||null;
+    if(!state.profile){showSetup();return}
+    render();
+    try{await loadAll();}catch(e){console.error(e);toast('Data belum termuat: '+e.message)}
+    render(); subscribeRealtime();
+  }catch(e){
+    console.error('BOOT ERROR',e);state.user=null;state.profile=null;showLogin('Koneksi aplikasi bermasalah. Tekan refresh dan coba lagi.');
+  }
+}
+async function login(){
+  const email=document.getElementById('loginEmail')?.value.trim();
+  const password=document.getElementById('loginPassword')?.value;
+  const btn=document.getElementById('loginBtn');
+  const status=document.getElementById('loginStatus');
+  if(!email||!password){if(status)status.textContent='Isi email dan password.';return}
+  if(!window.supabase){if(status)status.textContent='Koneksi login belum termuat. Tekan refresh lalu coba lagi.';return}
+  if(btn){btn.disabled=true;btn.textContent='Memeriksa...'}
+  try{
+    const {data,error}=await SB.auth.signInWithPassword({email,password});
+    if(error){if(status)status.textContent=error.message;return}
+    state.user=data.user;
+    const {data:p,error:pe}=await SB.from('profiles').select('*').eq('id',data.user.id).maybeSingle();
+    if(pe){if(status)status.textContent=pe.message;return}
+    state.profile=p||null;
+    if(!state.profile){showSetup();return}
+    render(); await loadAll(); render(); subscribeRealtime(); toast('Selamat datang, '+state.profile.name);
+  }catch(e){console.error(e);if(status)status.textContent='Login gagal: '+(e.message||e)}
+  finally{if(btn){btn.disabled=false;btn.textContent='Masuk'}}
+}
+async function logout(){await SB.auth.signOut();state={user:null,profile:null,members:[],schedules:[],messages:[],attendance:[],docs:[],loading:false,page:'home'};showLogin('Silakan masukkan email dan password.');}
+async function resetPassword(){const email=document.getElementById('loginEmail')?.value.trim();if(!email)return toast('Isi email dulu');const {error}=await SB.auth.resetPasswordForEmail(email,{redirectTo:location.origin+location.pathname});toast(error?error.message:'Link reset password dikirim ke email')}
+function hideAuthScreens(){['loginScreen','signupScreen','setupScreen'].forEach(id=>{const e=document.getElementById(id);if(e)e.style.display='none'});}
+function showLogin(message='Silakan login untuk melanjutkan.'){
+  document.getElementById('loginScreen').style.display='flex';
+  document.getElementById('signupScreen').style.display='none';
+  document.getElementById('setupScreen').style.display='none';
+  document.getElementById('appShell').style.display='none';
+  const s=document.getElementById('loginStatus'); if(s)s.textContent=message;
+}
+function showSignup(){
+  document.getElementById('loginScreen').style.display='none';
+  document.getElementById('signupScreen').style.display='flex';
+  document.getElementById('setupScreen').style.display='none';
+  document.getElementById('appShell').style.display='none';
+  const s=document.getElementById('signupStatus'); if(s)s.textContent='';
+}
+function showSetup(){
+  document.getElementById('loginScreen').style.display='none';
+  document.getElementById('signupScreen').style.display='none';
+  document.getElementById('setupScreen').style.display='flex';
+  document.getElementById('appShell').style.display='none';
+  const n=document.getElementById('spName'); if(n&&!n.value)n.value=state.user?.user_metadata?.name||'';
+  const s=document.getElementById('setupStatus'); if(s)s.textContent='';
+}
+function showApp(){
+  document.getElementById('loginScreen').style.display='none';
+  document.getElementById('signupScreen').style.display='none';
+  document.getElementById('setupScreen').style.display='none';
+  document.getElementById('appShell').style.display='block';
+}
+function syncTypeRelation(code, relId){const map={"01":"Bona","02":"Boru","03":"Bere","04":"Iba Bere"};const e=document.getElementById(relId);if(e)e.value=map[code]||"Bona";}
+async function signup(){
+  const name=document.getElementById('suName')?.value.trim();
+  const phone=document.getElementById('suPhone')?.value.trim()||'';
+  const email=document.getElementById('suEmail')?.value.trim();
+  const password=document.getElementById('suPassword')?.value||'';
+  const bona=document.getElementById('suBona')?.value||'01';
+  const rel=document.getElementById('suRel')?.value||'Bona';
+  const btn=document.getElementById('signupBtn'), status=document.getElementById('signupStatus');
+  if(!name||!email||!password){if(status)status.textContent='Nama, email dan password wajib diisi.';return}
+  if(password.length<8){if(status)status.textContent='Password minimal 8 karakter.';return}
+  if(btn){btn.disabled=true;btn.textContent='Mendaftarkan...'}
+  try{
+    const {data,error}=await SB.auth.signUp({email,password,options:{data:{name,phone,bona_group_code:bona,relationship:rel}}});
+    if(error){if(status)status.textContent=error.message;return}
+    state.user=data.user||null;
+    if(data.session&&state.user){
+      const {data:p,error:pe}=await SB.from('profiles').select('*').eq('id',state.user.id).maybeSingle();
+      if(pe) throw pe;
+      if(p){state.profile=p;showApp();await loadAll();render();subscribeRealtime();toast('Pendaftaran berhasil');return}
+      document.getElementById('spName').value=name;document.getElementById('spPhone').value=phone;document.getElementById('spBona').value=bona;document.getElementById('spRel').value=rel;showSetup();return;
+    }
+    if(status)status.textContent='Pendaftaran berhasil. Periksa email untuk konfirmasi, lalu kembali ke halaman Masuk.';
+  }catch(e){console.error(e);if(status)status.textContent='Pendaftaran gagal: '+(e.message||e)}
+  finally{if(btn){btn.disabled=false;btn.textContent='Daftar'}}
+}
+async function createProfile(){
+  if(!state.user)return showLogin('Sesi belum aktif. Silakan login.');
+  const name=document.getElementById('spName')?.value.trim();
+  const phone=document.getElementById('spPhone')?.value.trim()||'';
+  const bona=document.getElementById('spBona')?.value||'01';
+  const relationship=document.getElementById('spRel')?.value||'Bona';
+  const btn=document.getElementById('setupBtn'),status=document.getElementById('setupStatus');
+  if(!name){if(status)status.textContent='Nama lengkap wajib diisi.';return}
+  if(btn){btn.disabled=true;btn.textContent='Menyimpan...'}
+  try{
+    const {data,error}=await SB.rpc('create_my_profile',{p_name:name,p_phone:phone,p_bona_group_code:bona,p_relationship:relationship});
+    if(error)throw error;
+    if(data?.error)throw new Error(data.error);
+    const {data:p,error:pe}=await SB.from('profiles').select('*').eq('id',state.user.id).single();
+    if(pe)throw pe;
+    state.profile=p;
+    showApp();await loadAll();render();subscribeRealtime();toast('Profil berhasil dibuat • ID '+(p.member_id||''));
+  }catch(e){console.error(e);if(status)status.textContent='Gagal membuat profil: '+(e.message||e)}
+  finally{if(btn){btn.disabled=false;btn.textContent='Simpan Profil & Masuk'}}
+}
+function render(forcedPage){
+ if(!state.user){showLogin('Silakan login untuk melanjutkan.');return}
+ showApp();
+ if(!state.profile){document.querySelector('.bottom').style.display='none';app().innerHTML='<div class="card"><h2>Memuat profil...</h2><p class="muted">Mohon tunggu sebentar.</p></div>';return}
+ document.querySelector('.bottom').style.display='flex';
+ let p=String(forcedPage||state.page||location.hash.slice(1)||'home');
+ state.page=p;
+ setNav(p);
+ try{
+   if(p.startsWith('checkin?')){checkinFromQR();return}
+   if(p.startsWith('profile?member=')){memberProfile(decodeURIComponent(p.split('profile?member=')[1]||''));return}
+   if(p==='home')home();
+   else if(p==='members')members();
+   else if(p==='schedule')renderSchedulePage();
+   else if(p==='chat')chat();
+   else if(p==='attendance')attendance();
+   else if(p==='docs')docs();
+   else if(p==='admin')admin();
+   else profile();
+ }catch(e){
+   console.error('PSSAB RENDER ERROR',p,e);
+   app().innerHTML='<h2>Jadwal Ibadah</h2><div class="card"><h3>Halaman berhasil dibuka</h3><p class="muted">Terjadi kesalahan saat memuat isi halaman. Tekan Muat Ulang untuk mencoba lagi.</p><button onclick="location.reload()">Muat Ulang</button></div>';
+ }
+}
+function home(){const s=state.schedules[0];app().innerHTML=`<h2>Horas, ${esc(state.profile?.name||'Anggota')} 👋</h2><p class="motto">Dos Niroha Do Sibaen Nasaut</p><p class="muted">HORAS JALA GABE PUNGUAN SITUMORANG SIPITU AMA SEKTOR TANJUNG UNCANG — aplikasi kumpulan online.</p>${s?`<div class="card"><b class="gold">JADWAL TERDEKAT</b><h2>${esc(s.title)}</h2><b>${esc(s.event_date)} • ${esc(s.event_time)}</b><p>📍 ${esc(s.location)}</p><div class="row"><button onclick="go('attendance')">Daftar Hadir</button><button class="btn2" onclick='mapTo(${JSON.stringify(s.location||'')})'>Buka Maps</button></div></div>`:'<div class="card"><b>Belum ada jadwal.</b></div>'}<div class="grid"><button class="quick" onclick="go('members')">👥 <b>Anggota</b>Daftar anggota</button><button class="quick" onclick="go('schedule')">📅 <b>Jadwal</b>Ibadah bulanan</button><button class="quick" onclick="go('attendance')">✅ <b>Presensi</b>Daftar hadir</button><button class="quick" onclick="go('docs')">📷 <b>Dokumentasi</b>Foto kegiatan</button><button class="quick" onclick="go('chat')">💬 <b>Chat</b>Grup kumpulan</button>${isManager()?'<button class="quick" onclick="go(\'admin\')">⚙️ <b>Pengurus</b>Kelola jadwal</button>':''}</div>`}
+function makeToken(){if(window.crypto?.randomUUID)return crypto.randomUUID().replaceAll('-','');return Math.random().toString(36).slice(2)+Date.now().toString(36)}
+function scheduleStart(s){if(!s?.event_date||!s?.event_time)return null;const d=new Date(`${s.event_date}T${s.event_time}:00+07:00`);return isNaN(d)?null:d}
+function checkinWindow(s){const start=scheduleStart(s);if(!start)return null;return {open:new Date(start.getTime()-60*60000),close:new Date(start.getTime()+120*60000)}}
+function formatTime(d){return d?d.toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'}):'-'}
+function renderSchedulePage(){
+  const rows=Array.isArray(state.schedules)?state.schedules:[];
+  let html='<h2>Jadwal Ibadah Bulanan</h2>';
+  if(!rows.length){
+    html+='<div class="card"><h3>Belum ada jadwal ibadah</h3><p class="muted">Jika jadwal sudah dibuat oleh pengurus tetapi belum muncul, tekan tombol Muat Jadwal.</p><button onclick="refreshSchedule()">Muat Jadwal</button></div>';
+  }else{
+    html+=rows.map(s=>`<div class="card"><b style="color:var(--red)">${esc(s.title||'Ibadah')}</b><p>📅 ${esc(s.event_date||'')} • ${esc(s.event_time||'')}<br>📍 ${esc(s.location||'')}</p><button onclick='mapTo(${JSON.stringify(s.location||'')})'>Buka Lokasi</button> ${isManager()?`<button class="btn2" onclick="delSchedule('${s.id}')">Hapus</button>`:''}</div>`).join('');
+  }
+  if(isManager()) html+='<button onclick="go(\'admin\')">+ Tambah Jadwal</button>';
+  app().innerHTML=html;
+}
+async function refreshSchedule(){toast('Memuat jadwal...');await loadAll();render('schedule');}
+function members(){
+  app().innerHTML=`<h2>Daftar Anggota</h2><p class="muted">Data tersimpan online di Supabase.</p>
+  <div class="card"><div class="row" style="justify-content:space-between"><div><b>Tambah anggota</b><div class="muted">Admin dan anggota yang sudah login dapat menambahkan anggota baru.</div></div><button onclick="toggleAddMember()">+ Tambah</button></div>
+  <div id="addMemberBox" class="hide" style="margin-top:12px"><div class="field"><input id="mn" placeholder="Nama lengkap"></div><div class="field"><input id="mp" placeholder="No. HP (opsional)" inputmode="tel"></div><div class="field"><input id="me" type="email" placeholder="Email login anggota"></div><div class="field"><input id="mw" type="password" placeholder="Password awal (min. 8 karakter)"></div><div class="field"><label>Jenis anggota</label><select id="mb" onchange="syncTypeRelation(this.value,'mrel')"><option value="01">01 — Bona</option><option value="02">02 — Boru</option><option value="03">03 — Bere</option><option value="04">04 — Iba Bere</option></select></div><input type="hidden" id="mrel" value="Bona">
+  ${isManager()?'<div class="field"><select id="mr"><option>Anggota</option><option>Bendahara</option><option>Sekretaris</option><option>Ketua</option><option>Admin</option></select></div>':'<input type="hidden" id="mr" value="Anggota"><p class="muted">Anggota baru dibuat dengan peran <b>Anggota</b>.</p>'}
+  <div class="row"><button onclick="addMember()">Simpan Anggota</button><button class="btn2" onclick="toggleAddMember()">Batal</button></div><p class="muted">Password awal diberikan kepada anggota tersebut. Setelah login, anggota dapat menggunakan aplikasi seperti biasa.</p></div></div>
+  ${state.members.map((m,i)=>`<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start"><div class="person"><div class="avatar">${m.profile_photo_url?`<img src="${esc(m.profile_photo_url)}" style="width:42px;height:42px;border-radius:50%;object-fit:cover">`:esc((m.name||'?')[0])}</div><div><b>${String(i+1).padStart(2,'0')}. ${esc(m.name)}</b><div class="muted">ID: <b>${esc(m.member_id||'ID belum dibuat')}</b> - ${esc(m.relationship||'')}</div><div class="muted">Status: ${m.role?esc(m.role):'Anggota'}</div></div></div><div class="row"><button onclick="go('profile?member=${encodeURIComponent(m.id)}')">ID Card</button>${state.profile?.role==='Admin'?`<button class="btn2" onclick="editMember('${m.id}')">Edit</button><button onclick="requestDeleteMember('${m.id}')">Hapus</button>`:''}</div></div></div>`).join('')}
+  ${state.profile?.role==='Admin'?'<p class="muted">Admin dapat mengedit peran, nomor HP, mengaktifkan/menonaktifkan, atau menghapus anggota.</p>':''}`
+}
+
+function toggleAddMember(){document.getElementById('addMemberBox')?.classList.toggle('hide')}
+function requestDeleteMember(id){
+  if(state.profile?.role!=='Admin')return toast('Hanya Admin');
+  if(id===state.user.id)return toast('Akun Admin sendiri tidak dapat dihapus');
+  const m=state.members.find(x=>x.id===id);
+  if(!m)return toast('Anggota tidak ditemukan');
+  state.pendingDeleteMember={id,name:m.name||'anggota'};
+  document.getElementById('deleteMemberModal')?.remove();
+  document.body.insertAdjacentHTML('beforeend',`<div id="deleteMemberModal" class="delete-modal"><div class="delete-modal-card"><h3>Hapus Anggota?</h3><p>Yakin ingin menghapus <b>${esc(m.name||'anggota')}</b> dari daftar anggota aplikasi?</p><div class="row" style="justify-content:flex-end"><button class="btn2" onclick="closeDeleteMember()">Batal</button><button onclick="confirmDeleteMember()">Ya, Hapus</button></div></div></div>`);
+}
+function closeDeleteMember(){state.pendingDeleteMember=null;document.getElementById('deleteMemberModal')?.remove()}
+async function confirmDeleteMember(){
+  const pending=state.pendingDeleteMember;if(!pending)return;
+  const buttons=document.querySelectorAll('#deleteMemberModal button');buttons.forEach(b=>b.disabled=true);
+  const {data,error}=await SB.rpc('admin_delete_member',{p_user_id:pending.id});
+  if(error){buttons.forEach(b=>b.disabled=false);return toast(error.message||'Gagal menghapus')}
+  if(data?.error){buttons.forEach(b=>b.disabled=false);return toast(data.error)}
+  closeDeleteMember();await loadAll();toast('Anggota berhasil dihapus dari aplikasi');members();
+}
+async function addMember(){const name=document.getElementById('mn')?.value.trim(),phone=document.getElementById('mp')?.value.trim()||'',email=document.getElementById('me')?.value.trim(),password=document.getElementById('mw')?.value,role=document.getElementById('mr')?.value||'Anggota',bona_group_code=document.getElementById('mb')?.value||'01',relationship=document.getElementById('mrel')?.value||'Bona';if(!name||!email||!password)return toast('Nama, email dan password wajib diisi');if(password.length<8)return toast('Password minimal 8 karakter');const {data,error}=await SB.functions.invoke('add-member',{body:{name,phone,email,password,role,bona_group_code,relationship}});if(error)return toast(error.message||'Gagal menambahkan anggota');if(data?.error)return toast(data.error);await loadAll();toast('Anggota berhasil ditambahkan • ID '+(data.member_id||''));members()}
+function editMember(id){const m=state.members.find(x=>x.id===id);if(!m||state.profile?.role!=='Admin')return toast('Hanya Admin');app().innerHTML=`<h2>Edit Anggota</h2><div class="card"><div class="field"><label>Nama lengkap</label><input id="en" value="${esc(m.name)}"></div><div class="field"><label>No. HP</label><input id="ep" value="${esc(m.phone||'')}" inputmode="tel"></div><div class="field"><label>Jenis anggota</label><select id="eb" onchange="syncTypeRelation(this.value,'erel')">${[['01','Bona'],['02','Boru'],['03','Bere'],['04','Iba Bere']].map(x=>`<option value="${x[0]}" ${m.bona_group_code===x[0]?'selected':''}>${x[0]} — ${x[1]}</option>`).join('')}</select></div><input type="hidden" id="erel" value="${esc(m.relationship||'Bona')}"><div class="field"><label>Peran</label><select id="er">${['Anggota','Bendahara','Sekretaris','Ketua','Admin'].map(r=>`<option ${m.role===r?'selected':''}>${r}</option>`).join('')}</select></div><div class="field"><label>Status</label><select id="ea"><option value="true" ${m.active?'selected':''}>Aktif</option><option value="false" ${!m.active?'selected':''}>Nonaktif</option></select></div><div class="row"><button onclick="saveMember('${m.id}')">Simpan Perubahan</button><button class="btn2" onclick="go('members')">Batal</button></div></div>`}
+async function saveMember(id){
+  const name=document.getElementById('en')?.value.trim(),phone=document.getElementById('ep')?.value.trim()||'',role=document.getElementById('er')?.value,active=document.getElementById('ea')?.value==='true',bona_group_code=document.getElementById('eb')?.value,relationship=document.getElementById('erel')?.value;
+  if(!name)return toast('Nama wajib diisi');
+  const groups={'01':'Bona','02':'Boru','03':'Bere','04':'Iba Bere'};
+  const {data:old,error:oldError}=await SB.from('profiles').select('member_id,member_seq,bona_group_code').eq('id',id).maybeSingle();
+  if(oldError)return toast(oldError.message);
+  const seq=Number(old?.member_seq)||0;
+  if(seq<1)return toast('Nomor urut anggota belum tersedia. Jalankan migrasi v26 terlebih dahulu.');
+  const patch={name,phone,role,active,relationship,bona_group_code,bona_group_name:groups[bona_group_code]||relationship,member_seq:seq,member_id:bona_group_code+String(seq).padStart(2,'0')};
+  const {error}=await SB.from('profiles').update(patch).eq('id',id);
+  if(error)return toast(error.message);
+  await loadAll();toast('Data anggota diperbarui • ID '+patch.member_id);members()
+}
+
+function attendance(){
+  const rows=Array.isArray(state.schedules)?state.schedules:[];
+  if(!rows.length){
+    app().innerHTML=`<h2>Daftar Hadir</h2><div class="card"><h3>Belum ada jadwal</h3><p class="muted">Buat jadwal ibadah terlebih dahulu.</p><button onclick="go('schedule')">Buka Jadwal Ibadah</button></div>`;
+    return;
+  }
+  const opts=rows.map(s=>`<option value="${esc(s.id)}">${esc(s.title||'Ibadah')} — ${esc(s.event_date||'')}</option>`).join('');
+  if(isManager()){
+    app().innerHTML=`<h2>Daftar Hadir</h2>
+      <div class="card">
+        <label><b>Pilih jadwal ibadah</b></label>
+        <select id="as" onchange="attendanceManagerList()">${opts}</select>
+        <div class="row" style="margin-top:12px">
+          <button onclick="openQR()">📱 Tampilkan QR</button>
+          <button class="btn2" onclick="go('schedule')">📅 Lihat Jadwal</button>
+        </div>
+        <div id="qrBox"></div>
+      </div>
+      <div id="alist"></div>`;
+    attendanceManagerList();
+  }else{
+    app().innerHTML=`<h2>Daftar Hadir</h2>
+      <div class="card">
+        <label><b>Pilih jadwal ibadah</b></label>
+        <select id="as">${opts}</select>
+        <p class="muted">Untuk anggota, kehadiran dicatat dengan scan QR yang ditampilkan pengurus di lokasi ibadah.</p>
+        <button onclick="startScanner()">📷 Scan QR Kehadiran</button>
+        <div id="scannerBox"></div>
+      </div>`;
+  }
+}
+function attendanceManagerList(){
+  const e=document.getElementById('alist');if(!e)return;const sid=document.getElementById('as')?.value;const s=state.schedules.find(x=>x.id===sid);const rows=state.members.map(m=>{const a=state.attendance.find(x=>x.schedule_id===sid&&x.member_id===m.id);const st=a?.attendance_status||(a?.status?'Hadir':'Belum');return `<div class="card list"><div><b>${esc(m.name)}</b><div class="muted">${esc(m.role)} • ${esc(st)}</div></div><div class="row"><button class="btn2" onclick="setAttendance('${sid}','${m.id}','Hadir')">Hadir</button><button class="btn2" onclick="setAttendance('${sid}','${m.id}','Izin')">Izin</button><button class="btn2" onclick="setAttendance('${sid}','${m.id}','Sakit')">Sakit</button><button onclick="setAttendance('${sid}','${m.id}','Alpa')">Alpa</button></div></div>`}).join('');e.innerHTML=`<div class="card"><b>${esc(s?.title||'')}</b><p class="muted">Pengurus dapat memperbaiki status kehadiran bila diperlukan.</p></div>${rows}`
+}
+async function openQR(){
+  if(!isManager())return toast('Hanya pengurus');
+  const sid=document.getElementById('as')?.value,s=state.schedules.find(x=>x.id===sid);if(!s)return toast('Pilih jadwal');
+  const w=checkinWindow(s);if(!w)return toast('Waktu jadwal belum valid');
+  const box=document.getElementById('qrBox');if(!box)return;
+
+  // Satu QR permanen untuk satu jadwal. Token hanya dibuat sekali.
+  let {data:session,error:se}=await SB.from('attendance_sessions').select('id,token,opened_at,closes_at').eq('schedule_id',sid).maybeSingle();
+  if(se)return toast('QR belum siap: '+se.message);
+  if(!session){
+    const token=makeToken();
+    const {data:created,error}=await SB.from('attendance_sessions').insert({schedule_id:sid,token,opened_at:new Date().toISOString(),closes_at:w.close.toISOString()}).select('id,token,opened_at,closes_at').single();
+    if(error)return toast('QR belum siap: '+error.message);
+    session=created;
+  }else if(new Date(session.closes_at).getTime()!==w.close.getTime()){
+    const {data:updated,error}=await SB.from('attendance_sessions').update({closes_at:w.close.toISOString()}).eq('id',session.id).select('id,token,opened_at,closes_at').single();
+    if(error)return toast('QR belum siap: '+error.message);
+    session=updated;
+  }
+
+  const now=new Date(),isOpen=now>=w.open&&now<=w.close;
+  const url=location.origin+location.pathname+'#checkin?token='+encodeURIComponent(session.token);
+  box.innerHTML=`<div class="card qr-card"><h3>QR CHECK-IN</h3><p><b>${esc(s.title)}</b><br>${esc(s.event_date)} • ${esc(s.event_time||'')}</p><div id="qrcode"></div><p class="muted"><b>Satu QR untuk satu jadwal ibadah.</b><br>QR ini tidak berganti. Semua anggota memakai QR yang sama untuk jadwal ini.</p><div id="qrTimer" class="qr-timer">${isOpen?'🟢 Check-in sedang dibuka':'🕐 Check-in '+(now<w.open?'belum dibuka':'sudah ditutup')} • ${formatTime(w.open)}–${formatTime(w.close)} WIB</div><button class="btn2" onclick="document.getElementById('qrBox').innerHTML=''">Tutup QR</button></div>`;
+  if(window.QRCode)new QRCode(document.getElementById('qrcode'),{text:url,width:240,height:240,colorDark:'#2b1710',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});
+  else document.getElementById('qrcode').innerHTML='<p>QR tidak termuat. Periksa internet.</p>';
+}
+
+let qrScanner=null;
+let qrScanning=false;
+function stopScanner(){
+  if(qrScanner && qrScanning){
+    qrScanner.stop().catch(()=>{}).finally(()=>{qrScanning=false;});
+  }
+  qrScanner=null;
+  const box=document.getElementById('scannerBox');
+  if(box)box.innerHTML='';
+}
+async function startScanner(){
+  if(isManager())return toast('Scan QR digunakan oleh anggota.');
+  const box=document.getElementById('scannerBox');
+  if(!box)return;
+  stopScanner();
+  box.innerHTML=`<div class="card scanner"><h3>📷 Arahkan kamera ke QR</h3><div id="qr-reader"></div><p class="muted">Posisikan QR di dalam kotak. Kamera hanya digunakan untuk membaca QR check-in.</p><button class="btn2" onclick="stopScanner()">Tutup kamera</button></div>`;
+  if(!window.Html5Qrcode){box.innerHTML+=`<div class="card"><b>Scanner belum termuat.</b><p class="muted">Periksa koneksi internet lalu coba lagi.</p></div>`;return;}
+  qrScanner=new Html5Qrcode('qr-reader');
+  try{
+    await qrScanner.start({facingMode:'environment'},{fps:10,qrbox:{width:250,height:250}},async text=>{
+      stopScanner();
+      let target=text.trim();
+      try{
+        const u=new URL(target,location.origin);
+        if(u.hash.startsWith('#checkin?token=')){location.hash=u.hash;render();return;}
+        const token=u.searchParams.get('token');
+        if(token){location.hash='#checkin?token='+encodeURIComponent(token);render();return;}
+      }catch(e){}
+      if(target.startsWith('checkin?'))target='#'+target;
+      if(target.startsWith('#checkin?token=')){location.hash=target;render();return;}
+      app().innerHTML=`<h2>Scan QR</h2><div class="card"><h3>❌ QR bukan QR check-in PSSAB</h3><p class="muted">Silakan scan QR yang ditampilkan pengurus di tempat ibadah.</p><button onclick="go('attendance')">Kembali</button></div>`;
+    },()=>{});
+    qrScanning=true;
+  }catch(e){
+    qrScanning=false;
+    box.innerHTML=`<div class="card"><h3>❌ Kamera tidak dapat dibuka</h3><p>${esc(e.message||'Pastikan izin kamera diberikan kepada browser.')}</p><button onclick="go('attendance')">Kembali</button></div>`;
+  }
+}
+
+async function checkinFromQR(){
+  const m=location.hash.match(/^#checkin\?token=(.+)$/);if(!m)return;
+  const token=decodeURIComponent(m[1]);
+  if(!state.user){showLogin('Silakan login dahulu, lalu scan QR kembali.');return}
+  if(isManager()){app().innerHTML=`<h2>Check-in QR</h2><div class="card"><b>Pengurus</b><p class="muted">QR check-in ditujukan untuk anggota. Pengurus dapat mengelola status melalui menu Daftar Hadir.</p><button onclick="go('attendance')">Kembali</button></div>`;return}
+  app().innerHTML=`<h2>Check-in Kehadiran</h2><div class="card"><h3>Memeriksa QR...</h3><p class="muted">Mohon tunggu.</p></div>`;
+  const {data,error}=await SB.rpc('checkin_with_token',{p_token:token});
+  if(error||!data?.ok){app().innerHTML=`<h2>Check-in Kehadiran</h2><div class="card"><h3>❌ Check-in tidak berhasil</h3><p>${esc(data?.error||error?.message||'QR tidak valid atau sudah kedaluwarsa.')}</p><button onclick="go('attendance')">Kembali</button></div>`;return}
+  await loadAll();app().innerHTML=`<h2>Check-in Kehadiran</h2><div class="card" style="text-align:center"><div style="font-size:56px">✅</div><h2>Hadir tercatat!</h2><p>${esc(data.title||'Ibadah')}</p><p class="muted">${new Date().toLocaleString('id-ID')}</p><button onclick="go('attendance')">Kembali ke Daftar Hadir</button></div>`;
+}
+async function setAttendance(sid,mid,st){if(!isManager())return toast('Hanya pengurus');const payload={schedule_id:sid,member_id:mid,status:st==='Hadir',attendance_status:st};const {error}=await SB.from('attendance').upsert(payload,{onConflict:'schedule_id,member_id'});if(error)return toast(error.message);await loadAll();attendanceManagerList();toast('Status '+st+' disimpan')}
+function chat(){app().innerHTML=`<h2>Chat Kumpulan</h2><div id="msgs">${state.messages.map(m=>`<div class="chat ${m.sender_id===state.user.id?'me':''}"><b>${esc(m.profiles?.name||'Anggota')}</b><div>${esc(m.text)}</div><small>${new Date(m.created_at).toLocaleString('id-ID')}</small></div>`).join('')}</div><div class="card"><textarea id="ct" placeholder="Tulis pesan..."></textarea><button onclick="send()">Kirim</button></div>`}
+async function send(){const t=document.getElementById('ct')?.value.trim();if(!t)return;const {error}=await SB.from('messages').insert({sender_id:state.user.id,text:t});if(error)return toast(error.message);document.getElementById('ct').value='';await loadAll();chat()}
+function docs(){app().innerHTML=`<h2>Dokumentasi</h2><div class="card"><input id="photoFile" type="file" accept="image/*" onchange="uploadPhoto(this.files[0])"><div class="field"><input id="caption" placeholder="Keterangan foto"></div><p class="muted">Foto disimpan online di Supabase Storage.</p></div>${state.docs.map(d=>`<div class="card"><img class="photo" src="${esc(d.image_url)}"><b>${esc(d.caption||'Dokumentasi')}</b><p class="muted">${esc(d.profiles?.name||'Anggota')} • ${new Date(d.created_at).toLocaleString('id-ID')}</p></div>`).join('')}`}
+async function uploadPhoto(file){if(!file)return;const ext=(file.name.split('.').pop()||'jpg').toLowerCase();const path=state.user.id+'/'+Date.now()+'.'+ext;const {error:ue}=await SB.storage.from('documentation').upload(path,file,{upsert:false,contentType:file.type});if(ue)return toast(ue.message);const {data}=SB.storage.from('documentation').getPublicUrl(path);const caption=document.getElementById('caption')?.value||'';const {error:de}=await SB.from('documentation').insert({uploader_id:state.user.id,image_url:data.publicUrl,caption});if(de)return toast(de.message);await loadAll();docs();toast('Foto berhasil diunggah')}
+async function delSchedule(id){if(!confirm('Hapus jadwal ini?'))return;const {error}=await SB.from('schedules').delete().eq('id',id);if(error)return toast(error.message);await loadAll();renderSchedulePage();}
+function admin(){if(!isManager())return go('home');app().innerHTML=`<h2>Panel Pengurus</h2><div class="card"><h3>Tambah Jadwal Ibadah</h3><div class="field"><input id="st" placeholder="Judul ibadah"></div><div class="field"><input id="sd" type="date"></div><div class="field"><input id="sm" type="time"></div><div class="field"><input id="sl" placeholder="Lokasi lengkap"></div><button onclick="addS()">Simpan Jadwal</button></div><div class="card"><h3>Tambah Anggota</h3><p class="muted">Sekarang penambahan anggota dilakukan langsung dari menu <b>Anggota</b>. Admin dapat memilih peran pengurus; anggota biasa hanya dapat menambahkan anggota dengan peran Anggota.</p><button onclick="go('members')">Buka Daftar Anggota</button></div>`}
+async function addS(){const title=document.getElementById('st').value.trim(),date=document.getElementById('sd').value,time=document.getElementById('sm').value,loc=document.getElementById('sl').value.trim();if(!title||!date||!loc)return toast('Lengkapi judul, tanggal dan lokasi');const {error}=await SB.from('schedules').insert({title,event_date:date,event_time:time||'',location:loc});if(error)return toast(error.message);await loadAll();toast('Jadwal tersimpan');go('schedule')}
+function profile(){const m=state.profile;app().innerHTML=`<h2>Profil Saya</h2><div class="card"><div class="row" style="align-items:flex-start"><div class="avatar" style="width:86px;height:86px;border-radius:18px">${m.profile_photo_url?`<img src="${esc(m.profile_photo_url)}" style="width:86px;height:86px;border-radius:18px;object-fit:cover">`:esc((m.name||'?')[0])}</div><div><b style="font-size:20px">${esc(m.name||'')}</b><div class="muted">ID: <b>${esc(m.member_id||'Belum dibuat')}</b> - ${esc(m.relationship||'')}</div><div class="muted">Peran: ${esc(m.role||'')}</div><div class="muted">${esc(state.user?.email||'')}</div></div></div><div class="field"><label>Foto profil</label><input id="profilePhoto" type="file" accept="image/*" onchange="uploadProfilePhoto(this.files[0])"></div></div><button onclick="go('profile?member=${encodeURIComponent(m.id)}')">🪪 Lihat ID Card</button> <button class="btn2" onclick="logout()">Keluar</button>`}
+async function uploadProfilePhoto(file){if(!file)return;const ext=(file.name.split('.').pop()||'jpg').toLowerCase();const path=state.user.id+'/'+Date.now()+'.'+ext;const {error}=await SB.storage.from('profiles').upload(path,file,{upsert:false,contentType:file.type});if(error)return toast(error.message);const {data}=SB.storage.from('profiles').getPublicUrl(path);const {error:ue}=await SB.rpc('update_my_profile',{p_profile_photo_url:data.publicUrl});if(ue)return toast(ue.message);state.profile.profile_photo_url=data.publicUrl;const i=state.members.findIndex(x=>x.id===state.user.id);if(i>=0)state.members[i].profile_photo_url=data.publicUrl;toast('Foto profil berhasil disimpan');profile()}
+function printIdCard(){document.body.classList.add('print-idcard');setTimeout(()=>window.print(),80);setTimeout(()=>document.body.classList.remove('print-idcard'),1000)}
+async function shareIdCard(){const m=state.members.find(x=>x.id===state.currentCardMemberId);if(!m)return;const url=location.origin+location.pathname+'#profile?member='+encodeURIComponent(m.id);const text=`Kartu Anggota PSSAB Tanjung Uncang\n${m.name||''}\nID: ${m.member_id||'-'}\nKategori: ${m.relationship||'-'}`;try{if(navigator.share){await navigator.share({title:'Kartu Anggota PSSAB',text,url})}else if(navigator.clipboard){await navigator.clipboard.writeText(url);toast('Link ID Card disalin')}else{prompt('Salin link ID Card:',url)}}catch(e){if(e?.name!=='AbortError')toast('Bagikan dibatalkan') }}
+function memberProfile(id){const m=state.members.find(x=>x.id===id);if(!m)return app().innerHTML='<h2>ID Card</h2><div class="card">Anggota tidak ditemukan.<br><button onclick="go(\'members\')">Kembali</button></div>';state.currentCardMemberId=id;const url=location.origin+location.pathname+'#profile?member='+encodeURIComponent(m.id);const role=m.role||'Anggota';const rel=m.relationship||'-';app().innerHTML=`<h2>Kartu Anggota</h2><div class="idcard" id="idCardPrint"><div class="idtop"><img class="idlogo" src="icons/logo.jpg"><div class="idbrand"><strong>PSSAB</strong><span>HORAS JALA GABE PUNGUAN<br>SITUMORANG SIPITU AMA<br>SEKTOR TANJUNG UNCANG</span></div></div><div class="idmember"><div>${m.profile_photo_url?`<img class="idphoto" src="${esc(m.profile_photo_url)}">`:`<div class="idphoto" style="display:grid;place-items:center;background:#fff;color:#8e1017;font-size:44px;font-weight:900">${esc((m.name||'?')[0])}</div>`}</div><div class="idinfo"><div class="idname">${esc(m.name||'Anggota')}</div><div class="idfield"><span class="label">ID Anggota</span><span class="value">${esc(m.member_id||'-')}</span></div><div class="idfield"><span class="label">Kategori</span><span class="value">${esc(rel)}</span></div><div class="idfield"><span class="label">Status</span><span class="value">${esc(role)}</span></div></div></div><div class="idqrbox"><div class="idqr"><div id="memberQr"></div></div><div class="idqrhelp">Scan QR di sini saat hadir ibadah</div></div><div class="idfooter"><strong>PSSAB TANJUNG UNCANG</strong><em>Sian Sada Bona, Gabe Parbuena</em><div class="id-valid">Berlaku selama menjadi anggota PSSAB</div></div></div><div class="id-actions"><button onclick="printIdCard()">⬇️ Simpan / Cetak</button><button class="outline" onclick="shareIdCard()">↗️ Bagikan</button><button class="btn2" onclick="go('${id===state.user.id?'profile':'members'}')" style="grid-column:1/-1">Kembali</button></div>`;if(window.QRCode)new QRCode(document.getElementById('memberQr'),{text:url,width:220,height:220,colorDark:'#2b1710',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M})}
+
+function subscribeRealtime(){SB.channel('pssab-live-'+state.user.id).on('postgres_changes',{event:'*',schema:'public',table:'messages'},async()=>{await loadAll();if(location.hash==='#chat')chat()}).on('postgres_changes',{event:'*',schema:'public',table:'schedules'},async()=>{await loadAll();if(location.hash==='#schedule'||location.hash==='#home')render()}).on('postgres_changes',{event:'*',schema:'public',table:'attendance'},async()=>{await loadAll();if(location.hash==='#attendance')attendanceList()}).on('postgres_changes',{event:'*',schema:'public',table:'profiles'},async()=>{await loadAll();if(location.hash==='#members')members(); else if(location.hash==='#profile')profile();}).subscribe()}
+window.addEventListener('hashchange',()=>render());showLogin('Memeriksa sesi login...');boot();
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js',{updateViaCache:'none'}).then(r=>r.update()).catch(()=>{});}
+</script>
+</body>
+</html>
