@@ -214,6 +214,49 @@ border-radius:14px;
 }
 }
 
+/* ===== PSSAB LOGIN: BACKGROUND RUMAH BOLON ===== */
+#loginScreen {
+  background: transparent !important;
+}
+
+#loginScreen > .card {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Kotak krem hanya pada kolom Email dan Password */
+#loginScreen .field {
+  background: #fff7e6;
+  border: 1px solid rgba(215, 166, 42, 0.65);
+  border-radius: 12px;
+  padding: 3px 10px;
+  margin: 12px 0;
+}
+
+/* Input menyatu dengan kotak krem */
+#loginScreen .field input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  color: #251c18;
+}
+
+/* Tombol login dan tombol lainnya tetap marun */
+#loginScreen button {
+  background: #8e1017;
+  color: #fff;
+  border: 1px solid #8e1017;
+}
+
+/* Tetap marun saat tombol memakai kelas btn2 */
+#loginScreen button.btn2 {
+  background: #8e1017;
+  color: #fff;
+  border: 1px solid #8e1017;
+}
 </style>
 </head>
 <body>
