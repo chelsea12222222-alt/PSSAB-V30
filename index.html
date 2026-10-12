@@ -10,6 +10,134 @@
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <title>HORAS JALA GABE — PUNGUAN SITUMORANG SIPITU AMA BORU BERE IBEBERE SEKTOR TANJUNG UNCANG</title>
 <!-- PSSAB v28: ID Card modern + perbaikan lokasi Maps + motto resmi -->
+/* ===== PSSAB V30 MODERN UI FIX ===== */
+:root{
+--card:#fffdf8;
+--text:#2b1710;
+}
+body{
+min-height:100vh;
+padding:16px;
+background-color:#641016;
+background-image:
+linear-gradient(rgba(43,10,12,.58),rgba(43,10,12,.72)),
+url('rumah-bolon-pssab-v30.png');
+background-position:center;
+background-size:cover;
+background-attachment:fixed;
+}
+button,input,select,textarea{
+font:inherit;
+}
+button{
+min-height:44px;
+padding:11px 16px;
+border:0;
+border-radius:12px;
+background:var(--red);
+color:#fff;
+font-weight:800;
+cursor:pointer;
+box-shadow:0 4px 10px rgba(43,23,16,.12);
+}
+button:active{
+transform:scale(.98);
+}
+input,select,textarea{
+width:100%;
+min-height:44px;
+padding:11px 13px;
+border:1px solid #d8c9b8;
+border-radius:11px;
+background:#fff;
+color:#251c18;
+outline:none;
+}
+input:focus,select:focus,textarea:focus{
+border-color:var(--gold);
+box-shadow:0 0 0 3px rgba(215,166,42,.18);
+}
+.card{
+width:100%;
+max-width:520px;
+margin:18px auto;
+padding:22px;
+border:1px solid rgba(215,166,42,.55);
+border-radius:22px;
+background:rgba(255,253,248,.97);
+color:var(--text);
+box-shadow:0 16px 42px rgba(25,5,7,.25);
+}
+.brand{
+text-align:center;
+color:var(--red);
+font-weight:900;
+}
+.brand img{
+display:block;
+width:96px;
+height:96px;
+margin:0 auto 12px;
+object-fit:contain;
+border-radius:50%;
+}
+.muted{
+color:var(--muted);
+}
+.field{
+display:block;
+margin:14px 0;
+}
+.field label{
+display:block;
+margin-bottom:6px;
+font-size:14px;
+font-weight:800;
+}
+.row{
+display:flex;
+align-items:center;
+flex-wrap:wrap;
+gap:12px;
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:12px;
+}
+#appShell{
+width:100%;
+max-width:1000px;
+margin:0 auto;
+}
+#appShell header{
+padding:14px;
+border:1px solid rgba(215,166,42,.5);
+border-radius:18px;
+background:rgba(255,253,248,.97);
+color:var(--text);
+}
+#appShell main{
+width:100%;
+padding:16px 0;
+}
+.bottom{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:8px;
+margin:16px auto;
+}
+img{
+max-width:100%;
+}
+@media(max-width:480px){
+body{padding:10px}
+.card{padding:18px 15px;border-radius:18px}
+.grid{grid-template-columns:1fr}
+#appShell header{padding:11px}
+}
+  
 <style>
 :root{--red:#8e1017;--gold:#d7a62a;--dark:#2b1710;--cream:#fff7e6;--muted:#756b64}
 *{box-sizing:border-box}body{margin:0;background:#641016 url('rumah-bolon-pssab-v30.png') center center/cover fixed no-repeat;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#251c18}
