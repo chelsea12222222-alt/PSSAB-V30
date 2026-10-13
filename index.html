@@ -1457,7 +1457,16 @@ function render(forcedPage){
 function home(){
   const s = state.schedules?.[0];
   const profile = state.profile || {};
-  const name = profile.name || 'Anggota';
+const user = state.user || {};
+const name =
+profile.name ||
+profile.full_name ||
+user.user_metadata?.full_name ||
+user.user_metadata?.name ||
+user.email?.split('@')[0] ||
+'Anggota';
+
+ const name = profile.name || 'Anggota';
   const photo = profile.photo_url || profile.avatar_url || '';
   const initial = name.trim().charAt(0).toUpperCase() || 'A';
 
