@@ -1363,27 +1363,41 @@ function home(){
   const initial = name.trim().charAt(0).toUpperCase() || 'A';
 
   app().innerHTML = `
-    <section class="home-topbar">
-      <img class="home-logo" src="pssab-logo.png" alt="Logo PSSAB">
-      <div class="home-greeting">
-        <strong>Horas,</strong>
-        <span>${esc(name)} 👋</span>
-      </div>
-      <div class="home-actions">
-        <button class="home-notification"
-          aria-label="Notifikasi"
-          onclick="toast('Fitur notifikasi akan kita lanjutkan.')">♧</button>
-        <button class="home-avatar"
-          aria-label="Buka profil"
-          onclick="go('profile')">
-          ${photo
-            ? `<img src="${esc(photo)}" alt="Foto profil">`
-            : esc(initial)}
-        </button>
-      </div>
-    </section>
+    ```html
+<section class="home-topbar">
+  <img
+    class="home-logo"
+    src="pssab-logo.png"
+    alt="Logo PSSAB"
+  >
 
-    <section class="home-events">
+  <div class="home-greeting">
+    <strong>Horas,</strong>
+    <span>${esc(name)} 👋</span>
+  </div>
+
+  <div class="home-actions">
+    <button
+      class="home-notification"
+      aria-label="Notifikasi"
+      onclick="toast('Fitur notifikasi akan kita lanjutkan.')"
+    >
+      🔔
+    </button>
+
+    <button
+      class="home-avatar"
+      aria-label="Buka profil"
+      onclick="go('profile')"
+    >
+      ${photo
+        ? `<img src="${esc(photo)}" alt="Foto profil">`
+        : esc(initial)}
+    </button>
+  </div>
+</section>
+```
+  <section class="home-events">
       <div class="home-section-title">
         <h2>▦ Jadwal Ibadah Terdekat</h2>
         <button class="home-see-all" onclick="go('schedule')">
