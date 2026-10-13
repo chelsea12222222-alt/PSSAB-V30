@@ -1045,7 +1045,32 @@ margin-bottom: 12px;
   </div>
 </div>
 <div id="appShell" style="display:none">
-<header><div class="brand"><img src="pssab-logo.png"><div><h1>HORAS JALA GABE PUNGUAN SITUMORANG SIPITU AMA BORU BERE IBEBERE SEKTOR TANJUNG UNCANG</h1><small>PSSAB</small></div></div></header>
+<header class="pssab-topbar">
+  <div class="topbar-brand">
+    <img src="pssab-logo.png" alt="Logo PSSAB"
+         class="topbar-logo">
+  </div>
+
+  <div class="topbar-actions">
+    <button type="button"
+            class="topbar-icon"
+            id="notificationBtn"
+            aria-label="Notifikasi"
+            title="Notifikasi">
+      🔔
+    </button>
+
+    <button type="button"
+            class="topbar-profile"
+            onclick="go('profile')"
+            aria-label="Buka profil"
+            title="Profil anggota">
+      <img id="topbarProfilePhoto"
+           src="pssab-logo.png"
+           alt="Foto profil">
+    </button>
+  </div>
+</header>
 <main id="app"></main>
 <nav class="bottom">
 <button onclick="go('home')" id="n-home">⌂<br>Beranda</button>
