@@ -406,6 +406,306 @@ border-radius: 9px;
 #loginScreen .brand p {
 margin-bottom: 12px;
 }
+ 
+/* ===== PSSAB V30 MODERN HOME ===== */
+
+#appShell > header {
+  padding: 12px 16px;
+  border: 0;
+  border-bottom: 1px solid rgba(215,166,42,.45);
+  border-radius: 0;
+  background: rgba(43,10,12,.90);
+  color: #fff;
+  box-shadow: 0 5px 18px rgba(0,0,0,.16);
+}
+
+#appShell > header .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  color: #fff;
+}
+
+#appShell > header .brand img {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  margin: 0;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#appShell > header .brand h1 {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  text-shadow: none;
+}
+
+#appShell > header .brand small {
+  color: #ffd875;
+  font-weight: 900;
+}
+
+#appShell main {
+  padding: 12px 12px 20px;
+}
+
+.home-welcome {
+  padding: 16px 8px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.home-greeting {
+  font-size: 20px;
+  font-weight: 800;
+  text-align: left;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 5px #000;
+}
+
+.home-title {
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 10vw, 54px);
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #ffd45e;
+  line-height: 1.1;
+  text-shadow: 0 3px 8px #300609;
+}
+
+.home-subtitle {
+  max-width: 460px;
+  margin: 8px auto 0;
+  font-size: 12px;
+  line-height: 1.45;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 2px 5px #000;
+}
+
+.home-panel {
+  padding: 12px;
+  border: 1px solid rgba(215,166,42,.65);
+  border-radius: 23px;
+  background: rgba(255,253,248,.98);
+  color: #2b1710;
+  box-shadow: 0 10px 28px rgba(25,5,7,.22);
+}
+
+.home-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 2px 0 12px;
+  color: #8e1017;
+}
+
+.home-section-title > span {
+  font-size: 23px;
+}
+
+.home-section-title strong {
+  flex: 1;
+  font-size: 15px;
+}
+
+.home-see-all {
+  min-height: 34px;
+  padding: 6px 9px;
+  background: #fff0d5;
+  color: #8e1017;
+  font-size: 11px;
+  box-shadow: none;
+}
+
+.home-event {
+  display: grid;
+  grid-template-columns: 68px minmax(0,1fr);
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 17px;
+  background: #fffaf0;
+  border: 1px solid #f1e4d0;
+}
+
+.home-date {
+  display: flex;
+  min-height: 82px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 13px;
+  background: linear-gradient(145deg,#a80f1b,#700811);
+  color: #fff;
+}
+
+.home-date strong {
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.home-date span {
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.home-event-info {
+  min-width: 0;
+}
+
+.home-event-info h3 {
+  margin: 0 0 7px;
+  color: #8e1017;
+  font-size: 17px;
+  overflow-wrap: anywhere;
+}
+
+.home-event-info p {
+  margin: 5px 0;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.home-event-actions {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.home-event-actions button {
+  padding: 10px 6px;
+  font-size: 12px;
+  min-height: 42px;
+}
+
+.home-event-actions .home-map-btn {
+  background: #fff0d5;
+  border: 1px solid #eed7ab;
+  color: #503017;
+}
+
+.home-empty {
+  padding: 10px;
+  text-align: center;
+  background: #fffaf0;
+  border-radius: 14px;
+}
+
+.home-menu {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.home-tile {
+  display: flex;
+  min-width: 0;
+  min-height: 112px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 5px;
+  border: 1px solid #f0e4d3;
+  border-radius: 15px;
+  background: #fff;
+  color: #172d4c;
+  box-shadow: none;
+  text-align: center;
+}
+
+.home-tile:active {
+  transform: scale(.97);
+}
+
+.tile-icon {
+  font-size: 27px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.tile-blue { color: #168bd2; }
+.tile-red { color: #c51c2c; }
+.tile-green { color: #10a77b; }
+
+.home-tile strong {
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.home-tile small {
+  font-size: 10px;
+  line-height: 1.3;
+  font-weight: 500;
+  color: #62748a;
+}
+
+@media (max-width: 380px) {
+  #appShell main {
+    padding: 8px 8px 16px;
+  }
+
+  .home-welcome {
+    padding: 10px 5px 16px;
+  }
+
+  .home-greeting {
+    font-size: 17px;
+  }
+
+  .home-panel {
+    padding: 9px;
+    border-radius: 18px;
+  }
+
+  .home-section-title strong {
+    font-size: 13px;
+  }
+
+  .home-event {
+    grid-template-columns: 58px minmax(0,1fr);
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .home-date {
+    min-height: 72px;
+  }
+
+  .home-date strong {
+    font-size: 24px;
+  }
+
+  .home-event-info h3 {
+    font-size: 15px;
+  }
+
+  .home-menu {
+    gap: 6px;
+  }
+
+  .home-tile {
+    min-height: 100px;
+    padding: 7px 3px;
+  }
+
+  .home-tile strong {
+    font-size: 11px;
+  }
+
+  .home-tile small {
+    font-size: 9px;
+  }
+}
 </style>
 </head>
 <body>
