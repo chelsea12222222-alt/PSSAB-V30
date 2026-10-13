@@ -972,6 +972,94 @@ margin-bottom: 12px;
   .home-feature small { font-size: 10px; }
   }
 }
+  
+/* ===== PSSAB V30: HEADER BERANDA MODERN ===== */
+#appShell .pssab-topbar {
+  width: 100%;
+  min-height: 88px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: #fff;
+}
+
+#appShell .topbar-brand {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+#appShell .topbar-logo {
+  display: block;
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #d7a62a;
+  box-shadow: 0 3px 12px #0006;
+}
+
+#appShell .topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#appShell .topbar-icon,
+#appShell .topbar-profile {
+  width: 46px;
+  height: 46px;
+  min-height: 46px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(43, 23, 16, 0.48);
+  border: 1px solid rgba(255, 215, 117, 0.7);
+  color: #fff;
+  box-shadow: none;
+}
+
+#appShell .topbar-icon {
+  font-size: 23px;
+}
+
+#appShell .topbar-profile {
+  overflow: hidden;
+}
+
+#appShell .topbar-profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media (max-width: 380px) {
+  #appShell .pssab-topbar {
+    min-height: 74px;
+    padding: 8px 12px;
+  }
+
+  #appShell .topbar-logo {
+    width: 64px;
+    height: 64px;
+  }
+
+  #appShell .topbar-actions {
+    gap: 8px;
+  }
+}      
 </style>
 </head>
 <body>
