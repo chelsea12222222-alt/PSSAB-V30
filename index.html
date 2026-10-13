@@ -1432,6 +1432,17 @@ async function createProfile(){
 function render(forcedPage){
  if(!state.user){showLogin('Silakan login untuk melanjutkan.');return}
  showApp();
+
+const nameEl = document.getElementById('topbarMemberName');
+if (nameEl) {
+  nameEl.textContent =
+    state.profile?.name ||
+    state.profile?.full_name ||
+    state.user?.user_metadata?.full_name ||
+    state.user?.user_metadata?.name ||
+    state.user?.email?.split('@')[0] ||
+    'Anggota PSSAB';
+}
  if(!state.profile){document.querySelector('.bottom').style.display='none';app().innerHTML='<div class="card"><h2>Memuat profil...</h2><p class="muted">Mohon tunggu sebentar.</p></div>';return}
  document.querySelector('.bottom').style.display='flex';
  let p=String(forcedPage||state.page||location.hash.slice(1)||'home');
