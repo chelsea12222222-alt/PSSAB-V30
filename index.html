@@ -675,7 +675,122 @@ function render(forcedPage){
    app().innerHTML='<h2>Jadwal Ibadah</h2><div class="card"><h3>Halaman berhasil dibuka</h3><p class="muted">Terjadi kesalahan saat memuat isi halaman. Tekan Muat Ulang untuk mencoba lagi.</p><button onclick="location.reload()">Muat Ulang</button></div>';
  }
 }
-function home(){const s=state.schedules[0];app().innerHTML=`<h2>Horas, ${esc(state.profile?.name||'Anggota')} 👋</h2><p class="muted">HORAS JALA GABE PUNGUAN SITUMORANG SIPITU AMA SEKTOR TANJUNG UNCANG — aplikasi kumpulan online.</p>${s?`<div class="card"><b class="gold">JADWAL TERDEKAT</b><h2>${esc(s.title)}</h2><b>${esc(s.event_date)} • ${esc(s.event_time)}</b><p>📍 ${esc(s.location)}</p><div class="row"><button onclick="go('attendance')">Daftar Hadir</button><button class="btn2" onclick='mapTo(${JSON.stringify(s.location||'')})'>Buka Maps</button></div></div>`:'<div class="card"><b>Belum ada jadwal.</b></div>'}<div class="grid"><button class="quick" onclick="go('members')">👥 <b>Anggota</b>Daftar anggota</button><button class="quick" onclick="go('schedule')">📅 <b>Jadwal</b>Ibadah bulanan</button><button class="quick" onclick="go('attendance')">✅ <b>Presensi</b>Daftar hadir</button><button class="quick" onclick="go('docs')">📷 <b>Dokumentasi</b>Foto kegiatan</button><button class="quick" onclick="go('chat')">💬 <b>Chat</b>Grup kumpulan</button>${isManager()?'<button class="quick" onclick="go(\'admin\')">⚙️ <b>Pengurus</b>Kelola jadwal</button>':''}</div>`}
+function home() {
+  const s = Array.isArray(state.schedules)
+    ? state.schedules[0]
+    : null;
+
+  const eventDate = s?.event_date
+    ? new Date(s.event_date + 'T12:00:00')
+    : null;
+
+  const dateDay = eventDate && !isNaN(eventDate)
+    ? eventDate.toLocaleDateString('id-ID', { day: '2-digit' })
+    : '--';
+
+  const dateMonth = eventDate && !isNaN(eventDate)
+    ? eventDate.toLocaleDateString('id-ID', { month: 'short' })
+    : 'Jadwal';
+
+  const name = esc(state.profile?.name || 'Anggota');
+
+  app().innerHTML = `
+    <section class="home-welcome">
+      <div class="home-greeting">Horas, ${name} 👋</div>
+      <div class="home-title">PSSAB</div>
+      <p class="home-subtitle">
+        HORAS JALA GABE PUNGUAN SITUMORANG SIPITU AMA
+        BORU BERE IBEBERE SEKTOR TANJUNG UNCANG
+      </p>
+    </section>
+
+    <section class="home-panel">
+      <div class="home-section-title">
+        <span>📅</span>
+        <strong>Jadwal Ibadah Terdekat</strong>
+        <button class="home-see-all" onclick="go('schedule')">
+          Lihat Semua ›
+        </button>
+      </div>
+
+      ${s ? `
+        <article class="home-event">
+          <div class="home-date">
+            <strong>${dateDay}</strong>
+            <span>${dateMonth}</span>
+          </div>
+
+          <div class="home-event-info">
+            <h3>${esc(s.title || 'Ibadah')}</h3>
+            <p>◷ ${esc(s.event_time || '-')}</p>
+            <p>📍 ${esc(s.location || '-')}</p>
+          </div>
+
+          <div class="home-event-actions">
+            <button onclick="go('attendance')">
+              ✓ Daftar Hadir
+            </button>
+            <button class="home-map-btn"
+              onclick='mapTo(${JSON.stringify(s.location || '')})'>
+              📍 Buka Maps
+            </button>
+          </div>
+        </article>
+      ` : `
+        <div class="home-empty">
+          <p>Belum ada jadwal ibadah.</p>
+          <button onclick="refreshSchedule()">Muat Jadwal</button>
+        </div>
+      `}
+
+      <div class="home-menu">
+        <button class="home-tile" onclick="go('members')">
+          <span class="tile-icon tile-blue">👥</span>
+          <strong>Anggota</strong>
+          <small>Lihat daftar anggota</small>
+        </button>
+
+        <button class="home-tile" onclick="go('schedule')">
+          <span class="tile-icon tile-red">▦</span>
+          <strong>Ibadah</strong>
+          <small>Jadwal & Kehadiran</small>
+        </button>
+
+        <button class="home-tile" onclick="go('chat')">
+          <span class="tile-icon tile-green">●</span>
+          <strong>Chat</strong>
+          <small>Komunikasi anggota</small>
+        </button>
+
+        <button class="home-tile" onclick="go('docs')">
+          <span class="tile-icon tile-red">▣</span>
+          <strong>Dokumentasi</strong>
+          <small>Foto & kegiatan</small>
+        </button>
+
+        <button class="home-tile" onclick="go('schedule')">
+          <span class="tile-icon tile-green">⌖</span>
+          <strong>Peta Lokasi</strong>
+          <small>Lokasi ibadah</small>
+        </button>
+
+        <button class="home-tile" onclick="go('profile')">
+          <span class="tile-icon tile-blue">☷</span>
+          <strong>Lainnya</strong>
+          <small>Profil & fitur lainnya</small>
+        </button>
+
+        ${isManager() ? `
+          <button class="home-tile" onclick="go('admin')">
+            <span class="tile-icon tile-red">⚙</span>
+            <strong>Pengurus</strong>
+            <small>Kelola kegiatan</small>
+          </button>
+        ` : ''}
+      </div>
+    </section>
+  `;
+}
 function makeToken(){if(window.crypto?.randomUUID)return crypto.randomUUID().replaceAll('-','');return Math.random().toString(36).slice(2)+Date.now().toString(36)}
 function scheduleStart(s){if(!s?.event_date||!s?.event_time)return null;const d=new Date(`${s.event_date}T${s.event_time}:00+07:00`);return isNaN(d)?null:d}
 function checkinWindow(s){const start=scheduleStart(s);if(!start)return null;return {open:new Date(start.getTime()-60*60000),close:new Date(start.getTime()+120*60000)}}
