@@ -1331,7 +1331,316 @@ margin-bottom: 12px;
     font-size: 12px;
   }
 }
-\n</style>
+\n
+
+/* ===== PSSAB V30.2: MOBILE FIT + BOTTOM NAV SINGLE ROW ===== */
+@media (max-width: 600px) {
+  html { min-height: 100%; }
+  body {
+    min-height: 100dvh;
+    padding: 0 !important;
+    background-attachment: scroll;
+  }
+  #appShell {
+    width: 100%;
+    max-width: none;
+    min-height: 100dvh;
+    margin: 0;
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  }
+  #appShell > header.pssab-topbar {
+    min-height: 62px;
+    padding: 7px 12px;
+    grid-template-columns: 42px minmax(0, 1fr) 38px;
+    gap: 8px;
+  }
+  #appShell > header.pssab-topbar .topbar-brand,
+  #appShell > header.pssab-topbar .topbar-actions {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+  }
+  #appShell > header.pssab-topbar .topbar-logo {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+  }
+  #appShell > header.pssab-topbar #notificationBtn {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    font-size: 17px;
+  }
+  #appShell main {
+    padding: 8px 9px calc(14px + env(safe-area-inset-bottom)) !important;
+  }
+  .home-events {
+    padding: 10px;
+    border-radius: 18px;
+    box-shadow: 0 5px 16px rgba(37, 5, 7, .15);
+  }
+  .home-section-title {
+    gap: 6px;
+    margin-bottom: 9px;
+  }
+  .home-section-title h2 {
+    font-size: 14px;
+    line-height: 1.25;
+  }
+  .home-see-all {
+    min-height: 34px;
+    padding: 6px 9px;
+    font-size: 11px;
+    border-radius: 10px;
+  }
+  .home-event-card {
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 8px;
+    padding: 8px;
+    border-radius: 15px;
+  }
+  .home-date {
+    min-height: 72px;
+    border-radius: 12px;
+  }
+  .home-date strong { font-size: 25px; }
+  .home-date span { font-size: 12px; }
+  .home-event-info h3 {
+    margin: 1px 0 5px;
+    font-size: 15px;
+    line-height: 1.2;
+  }
+  .home-event-info p {
+    margin: 4px 0;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+  .home-event-buttons { gap: 6px; }
+  .home-event-buttons button {
+    min-height: 38px;
+    padding: 6px 4px;
+    font-size: 11px;
+    border-radius: 10px;
+  }
+  .home-feature-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+    margin-top: 9px;
+  }
+  .home-feature {
+    min-height: 86px;
+    gap: 4px;
+    padding: 7px 3px;
+    border-radius: 13px;
+  }
+  .feature-icon {
+    font-size: 22px;
+    line-height: 1.05;
+  }
+  .home-feature strong {
+    font-size: 11px;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+  .home-feature small {
+    font-size: 9px;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+  /* Keep all five main destinations on one line and above Android system navigation. */
+  #appShell > nav.bottom {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: stretch;
+    justify-content: stretch;
+    gap: 5px;
+    margin: 0;
+    padding: 7px 7px calc(7px + env(safe-area-inset-bottom));
+    border-top: 1px solid rgba(215, 166, 42, .65);
+    border-radius: 0;
+    background: linear-gradient(135deg, #741019, #4f0a10);
+    box-shadow: 0 -5px 18px rgba(30, 0, 4, .22);
+  }
+  #appShell > nav.bottom button {
+    display: flex;
+    min-width: 0;
+    min-height: 51px;
+    height: 51px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin: 0;
+    padding: 4px 1px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: transparent;
+    color: #fff;
+    font-size: 10px;
+    line-height: 1.1;
+    font-weight: 750;
+    white-space: nowrap;
+    box-shadow: none;
+    overflow: hidden;
+  }
+  #appShell > nav.bottom button.active {
+    background: #97131d;
+    border-color: rgba(242, 212, 123, .55);
+  }
+}
+@media (max-width: 360px) {
+  #appShell > nav.bottom { gap: 2px; padding-left: 4px; padding-right: 4px; }
+  #appShell > nav.bottom button { font-size: 9px; border-radius: 8px; }
+  .home-events { padding: 8px; }
+  .home-section-title h2 { font-size: 13px; }
+  .home-feature-grid { gap: 5px; }
+  .home-feature { min-height: 80px; }
+}
+
+
+
+/* ===== PSSAB V30.3: BERANDA MENYERUPAI REFERENSI ===== */
+@media (max-width: 600px) {
+  body {
+    background-color: #5c1016 !important;
+    background-image: linear-gradient(180deg, rgba(66,7,13,.18), rgba(66,7,13,.34)), url('rumah-bolon-pssab-v30.png') !important;
+    background-position: center top !important;
+    background-size: cover !important;
+    background-attachment: scroll !important;
+  }
+  #appShell {
+    min-height: 100dvh;
+    padding-bottom: calc(70px + env(safe-area-inset-bottom)) !important;
+  }
+  #appShell > header.pssab-topbar {
+    grid-template-columns: 42px minmax(0,1fr) auto !important;
+    gap: 8px !important;
+    min-height: 64px !important;
+    padding: 8px 12px !important;
+    background: linear-gradient(100deg, rgba(75,5,12,.94), rgba(116,12,22,.88)) !important;
+    border-bottom: 1px solid rgba(230,190,91,.65) !important;
+  }
+  #appShell > header.pssab-topbar .topbar-brand,
+  #appShell > header.pssab-topbar .topbar-logo {
+    width: 40px !important; height: 40px !important; min-width: 40px !important;
+  }
+  #appShell > header.pssab-topbar .topbar-logo { border-width: 1.5px !important; }
+  #appShell > header.pssab-topbar .topbar-greeting strong { font-size: 11px !important; }
+  #appShell > header.pssab-topbar #topbarMemberName { font-size: 12px !important; }
+  #appShell > header.pssab-topbar .topbar-actions {
+    width: auto !important; height: 40px !important; min-width: 0 !important;
+    display: flex !important; flex-direction: row !important; gap: 7px !important;
+  }
+  #appShell > header.pssab-topbar .topbar-profile {
+    display: inline-flex !important; align-items: center !important; justify-content: center !important;
+    width: 36px !important; height: 36px !important; min-width: 36px !important; min-height: 36px !important;
+    padding: 0 !important; margin: 0 !important; overflow: hidden !important;
+    border: 2px solid #e3bd63 !important; border-radius: 50% !important;
+    background: #fff0d5 !important; color: #82101a !important; font-size: 14px !important;
+    box-shadow: none !important;
+  }
+  #topbarAvatarInitial { display:flex; align-items:center; justify-content:center; width:100%; height:100%; }
+  #topbarAvatarInitial img { display:block; width:100%; height:100%; object-fit:cover; border-radius:50%; }
+  #appShell > header.pssab-topbar #notificationBtn {
+    width: 34px !important; height: 34px !important; min-width: 34px !important; min-height: 34px !important;
+    border: 0 !important; background: transparent !important; color: #fff !important; font-size: 21px !important;
+  }
+  #appShell main {
+    padding: 0 9px 12px !important;
+  }
+  .home-hero {
+    min-height: 142px;
+    display: flex; align-items: center;
+    margin: 0 -9px 0;
+    padding: 10px 18px 18px 70px;
+    position: relative; overflow: hidden;
+    background: linear-gradient(100deg, rgba(63,5,12,.22), rgba(90,8,17,.18));
+    color: white;
+  }
+  .home-hero:before {
+    content: ""; position:absolute; inset:0;
+    background: linear-gradient(90deg, rgba(57,4,11,.08), rgba(75,4,12,.45));
+    pointer-events:none;
+  }
+  .home-hero-copy { position:relative; z-index:1; min-width:0; }
+  .home-hero h1 {
+    margin: 0 0 3px !important; color: #ffd56c !important;
+    font-family: Georgia, 'Times New Roman', serif !important;
+    font-size: clamp(34px, 10vw, 43px) !important; line-height: 1 !important;
+    letter-spacing: 2px; text-shadow: 0 2px 5px #300308;
+  }
+  .home-hero p {
+    margin: 0 !important; color: #fff !important; font-size: 10px !important;
+    line-height: 1.35 !important; font-weight: 850 !important;
+    text-shadow: 0 2px 4px #300308; overflow-wrap: anywhere;
+  }
+  .home-events {
+    position: relative; z-index: 2;
+    margin: -2px 0 0 !important; padding: 12px !important;
+    border: 1px solid #e8c987 !important; border-radius: 20px !important;
+    background: rgba(255,254,250,.98) !important;
+    box-shadow: 0 5px 18px rgba(42,4,8,.22) !important;
+  }
+  .home-section-title { align-items:center !important; margin-bottom: 9px !important; }
+  .home-section-title h2 { font-size: 14px !important; line-height: 1.25 !important; color:#173252 !important; }
+  .home-see-all { min-height: 32px !important; padding: 5px 8px !important; background:transparent !important; color:#9b1020 !important; font-size:10px !important; }
+  .home-event-card {
+    grid-template-columns: 48px minmax(0,1fr) !important; gap: 9px !important;
+    padding: 8px !important; border: 0 !important; border-radius: 13px !important;
+    background: #fff !important;
+  }
+  .home-date { min-height: 65px !important; border-radius: 12px !important; }
+  .home-date strong { font-size: 23px !important; }
+  .home-date span { font-size: 11px !important; }
+  .home-event-info h3 { margin: 0 0 4px !important; font-size: 14px !important; line-height:1.2 !important; }
+  .home-event-info p { margin: 3px 0 !important; font-size: 11px !important; line-height:1.25 !important; }
+  .home-event-buttons { gap: 7px !important; margin-top: 2px; }
+  .home-event-buttons button { min-height: 34px !important; padding: 5px 4px !important; font-size: 10px !important; border-radius: 10px !important; }
+  .home-feature-grid { grid-template-columns: repeat(3,minmax(0,1fr)) !important; gap: 7px !important; margin-top: 9px !important; }
+  .home-feature {
+    min-height: 78px !important; gap: 3px !important; padding: 6px 3px !important;
+    border: 1px solid #e4e8ec !important; border-radius: 12px !important;
+    background: #fff !important; box-shadow: 0 1px 3px rgba(23,50,82,.05) !important;
+  }
+  .feature-icon { font-size: 22px !important; line-height: 1 !important; }
+  .home-feature strong { font-size: 10px !important; line-height:1.2 !important; }
+  .home-feature small { font-size: 9px !important; line-height:1.15 !important; }
+  #appShell > nav.bottom {
+    position: fixed !important; z-index: 1000 !important; left: 8px !important; right: 8px !important;
+    bottom: calc(5px + env(safe-area-inset-bottom)) !important; width: auto !important;
+    display: grid !important; grid-template-columns: repeat(5,minmax(0,1fr)) !important;
+    gap: 0 !important; margin: 0 !important; padding: 5px 3px !important;
+    border: 1px solid #e7d7c2 !important; border-radius: 15px !important;
+    background: rgba(255,254,250,.98) !important; box-shadow: 0 4px 18px rgba(38,5,8,.22) !important;
+  }
+  #appShell > nav.bottom button {
+    min-width:0 !important; width:100% !important; height:44px !important; min-height:44px !important;
+    display:flex !important; flex-direction:column !important; align-items:center !important; justify-content:center !important;
+    gap:2px !important; padding:3px 0 !important; margin:0 !important; overflow:hidden !important;
+    border:0 !important; border-radius:9px !important; background:transparent !important;
+    color:#41617d !important; font-size:9px !important; line-height:1.1 !important; font-weight:700 !important;
+    box-shadow:none !important; white-space:nowrap !important;
+  }
+  #appShell > nav.bottom button.active { color:#a20e1b !important; background:#fff0e8 !important; }
+}
+@media (max-width: 360px) {
+  .home-hero { min-height: 130px; padding-left: 58px; }
+  .home-hero h1 { font-size: 32px !important; }
+  .home-hero p { font-size: 9px !important; }
+  .home-events { padding: 9px !important; }
+  .home-feature { min-height: 74px !important; }
+  .home-feature strong { font-size: 9px !important; }
+  .home-feature small { font-size: 8px !important; }
+}
+
+</style>
 </head>
 <body>
 <div id="loginScreen" style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:16px 14px 24px;background:transparent">
@@ -1404,6 +1713,9 @@ margin-bottom: 12px;
     <span id="topbarMemberName">Anggota PSSAB👋</span>
   </div>
   <div class="topbar-actions">
+    <button type="button" class="topbar-profile" id="topbarProfileBtn" onclick="go('profile')" aria-label="Profil anggota" title="Profil anggota">
+      <span id="topbarAvatarInitial">A</span>
+    </button>
     <button
       type="button"
       class="topbar-icon"
@@ -1628,8 +1940,19 @@ function home(){
   const name = profile.name || 'Anggota';
   const photo = profile.photo_url || profile.avatar_url || '';
   const initial = name.trim().charAt(0).toUpperCase() || 'A';
+  const avatar = document.getElementById('topbarAvatarInitial');
+  if (avatar) {
+    if (photo) avatar.innerHTML = `<img src="${esc(photo)}" alt="Foto profil">`;
+    else avatar.textContent = initial;
+  }
 
 app().innerHTML = `
+  <section class="home-hero" aria-label="Identitas PSSAB">
+    <div class="home-hero-copy">
+      <h1>PSSAB</h1>
+      <p>HORAS JALA GABE PUNGUAN<br>SITUMORANG SIPITU AMA BORU BERE IBEBERE<br>SEKTOR TANJUNG UNCANG</p>
+    </div>
+  </section>
   <section class="home-events">
       <div class="home-section-title">
         <h2>▦ Jadwal Ibadah Terdekat</h2>
