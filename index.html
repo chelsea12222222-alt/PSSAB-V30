@@ -2760,4 +2760,45 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js',{updat
   background-position: center center !important;
   background-repeat: no-repeat !important;
 }
+ 
+/* ===== PSSAB V30: BACKGROUND HERO + TOPBAR ===== */
+
+/* 1. TOPBAR PALING ATAS */
+#appShell.home-active > header {
+  background-color: #641016 !important;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(35, 8, 10, 0.48),
+      rgba(35, 8, 10, 0.18)
+    ),
+    url("./PSSAB.BKG.png") !important;
+  background-size: cover !important;
+  background-position: center 45% !important;
+  background-repeat: no-repeat !important;
+}
+
+/* 2. HERO BERANDA */
+#appShell.home-active .home-hero {
+  background-color: #641016 !important;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(45, 5, 10, 0.72),
+      rgba(45, 5, 10, 0.18)
+    ),
+    url("./PSSAB.BKG.png") !important;
+  background-size: cover !important;
+  background-position: center 58% !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Pertahankan lapisan gelap pada hero */
+#appShell.home-active .home-hero:before {
+  background: linear-gradient(
+    0deg,
+    rgba(36, 4, 8, 0.5),
+    transparent 85%
+  ) !important;
+}
 </style>
