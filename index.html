@@ -2833,23 +2833,23 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js',{updat
   background-position: center 58% !important;
   background-repeat: no-repeat !important;
 }
- 
-/* PSSAB — Perjelas tulisan dashboard Anggota */
-#appShell.home-active .members-page .members-heading h2,
-#appShell.home-active .members-page .members-heading p,
-#appShell.home-active .members-page .members-password-note,
-#appShell.home-active .members-page .members-admin-note {
+
+/* Dashboard Anggota PSSAB — tulisan jelas tanpa bayangan */
+.members-page .members-heading h2,
+.members-page .members-heading p,
+.members-page .members-password-note,
+.members-page .members-admin-note {
   color: #8e1017 !important;
-  text-shadow: none !important;
   -webkit-text-fill-color: #8e1017 !important;
+  text-shadow: none !important;
   filter: none !important;
 }
 
-/* Deskripsi dibuat lebih nyaman dibaca */
-#appShell.home-active .members-page .members-heading p,
-#appShell.home-active .members-page .members-password-note,
-#appShell.home-active .members-page .members-admin-note {
-  font-weight: 400;
+/* Kerapian tulisan deskripsi */
+.members-page .members-heading p,
+.members-page .members-password-note,
+.members-page .members-admin-note {
+  font-weight: 400 !important;
   line-height: 1.6;
 }
 </style>
